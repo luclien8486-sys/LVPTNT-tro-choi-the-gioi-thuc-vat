@@ -1,69 +1,7 @@
-<!doctype html>
-<html lang="vi">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Trò chơi thế giới thực vật - mức lớp 1</title>
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Khu vườn tư duy kỳ diệu</title>
 <style>
-:root{--green:#1d7b56;--green2:#2b9a6e;--soft:#f4fff7;--yellow:#ffd45d;--shadow:0 12px 30px rgba(18,93,60,.14);--pink:#ef5b86}
-*{box-sizing:border-box}
-body{margin:0;font-family:"Arial Rounded MT Bold","Nunito",system-ui,sans-serif;background:linear-gradient(180deg,#ebfff2,#eff7ff);color:#204636}
-button{font:inherit;cursor:pointer}
-button:focus-visible{outline:4px solid #ffbb46;outline-offset:3px}
-.app{max-width:1220px;margin:auto;padding:18px}
-.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
-.brand{font-weight:900;color:var(--green);font-size:clamp(22px,3vw,34px)}
-.tools{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-.pill,.iconbtn{background:#fff;border:0;border-radius:999px;box-shadow:var(--shadow)}
-.pill{padding:12px 18px;font-weight:900}
-.iconbtn{width:52px;height:52px;font-size:24px}
-.progress{display:flex;gap:8px;margin:18px 0}
-.dot{height:11px;flex:1;border-radius:999px;background:#dcecdf}
-.dot.done{background:#58c98a}
-.dot.now{background:#ffbd49}
-.stage{position:relative;overflow:hidden;background:rgba(255,255,255,.94);border:4px solid #fff;box-shadow:0 18px 60px rgba(42,103,74,.15);border-radius:34px;min-height:690px;padding:28px 20px 24px;text-align:center}
-.stage:before{content:"";position:absolute;left:-90px;bottom:-160px;width:320px;height:320px;background:#dcf5d7;border-radius:50%}
-.stage:after{content:"";position:absolute;right:-80px;top:-120px;width:260px;height:260px;background:#fff2c6;border-radius:50%}
-.stage>*{position:relative;z-index:1}
-.kicker{display:inline-block;padding:9px 18px;border-radius:999px;background:#fff2b9;color:#8b6400;font-weight:900}
-.heading{font-size:clamp(30px,5vw,58px);line-height:1.08;margin:12px 0;color:var(--green)}
-.sub{font-size:clamp(18px,2.4vw,25px);font-weight:800;line-height:1.35;max-width:920px;margin:0 auto 18px;color:#254a39}
-.hero{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin:6px 0 16px}
-.hero .bigart{width:170px;height:170px}
-.art{width:100%;height:100%;filter:drop-shadow(0 10px 10px rgba(0,0,0,.08))}
-.choices{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;max-width:1000px;margin:18px auto}
-.choices.three{grid-template-columns:repeat(3,minmax(0,1fr));max-width:900px}
-.choices.two{grid-template-columns:repeat(2,minmax(0,1fr));max-width:760px}
-.choice{border:4px solid #d4ebdb;background:linear-gradient(180deg,#fff,#f6fff8);border-radius:28px;min-height:215px;padding:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;box-shadow:var(--shadow);color:#264939;transition:transform .12s,border-color .12s,background .12s}
-.choice:hover{transform:translateY(-4px)}
-.choice:disabled{cursor:default}
-.choice:disabled:hover{transform:none}
-.choice.correct{border-color:#45c27e;background:#dcfae6}
-.choice.wrong{border-color:#f47d95;background:#ffe7ec}
-.choice .artbox{width:min(100%,150px);height:138px}
-.label{font-size:clamp(20px,2.2vw,28px);font-weight:900}
-.primary{border:0;border-radius:999px;background:linear-gradient(135deg,#ffd65f,#ffab39);box-shadow:0 8px 0 #df8c23;color:#6d4500;font-weight:900;font-size:clamp(20px,2.6vw,27px);padding:17px 38px;min-width:220px}
-.feedback{min-height:48px;font-size:27px;font-weight:900;margin:12px auto;color:#1d8653}
-.feedback.err{color:#d85368}
-.bottom{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:16px}
-.note{text-align:center;margin-top:12px;color:#5f7f70;font-size:15px}
-.order{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;max-width:1050px;margin:18px auto}
-.step{display:inline-grid;place-items:center;width:42px;height:42px;border-radius:50%;background:#ffe18f;color:#7b5200;font-weight:900;font-size:22px}
-.scorebig{font-size:64px;font-weight:900;color:var(--green);margin:8px 0}
-.stars{font-size:64px;margin:8px 0}
-.smallhint{font-size:16px;color:#5b7d6d}
-@media(max-width:860px){
- .stage{padding:22px 10px 20px;min-height:720px;border-radius:24px}
- .choices,.choices.three,.choices.two,.order{grid-template-columns:1fr;gap:10px}
- .choice{min-height:176px;border-radius:20px}
- .choice .artbox{height:110px}
- .hero .bigart{width:120px;height:120px}
- .iconbtn{width:46px;height:46px}
-}
-</style>
-</head>
-<body>
-<svg aria-hidden="true" width="0" height="0" style="position:absolute;overflow:hidden"><defs>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,system-ui,sans-serif;background:linear-gradient(130deg,#e9fff2,#eaf4ff);color:#154a37}button{font:inherit;cursor:pointer}button:focus-visible{outline:4px solid orange;outline-offset:3px}.wrap{max-width:1200px;margin:auto;padding:16px}.top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.logo{font-size:clamp(20px,2.5vw,30px);font-weight:900;color:#19734f}.tools{display:flex;align-items:center;gap:10px}.pill,.round{border:0;background:white;border-radius:99px;padding:10px 16px;box-shadow:0 8px 24px #144f3621;font-weight:900}.round{font-size:25px;padding:10px}.progress{display:flex;gap:6px;margin:14px 0}.dot{height:10px;border-radius:20px;background:#d1e6d6;flex:1}.dot.done{background:#5ac389}.dot.active{background:#ffc252}.stage{text-align:center;min-height:660px;border-radius:30px;border:4px solid white;background:#ffffffed;box-shadow:0 18px 50px #176a4421;padding:26px 22px}.tag{background:#fff0b2;padding:8px 17px;border-radius:40px;font-weight:900;color:#795600}.title{color:#177a52;font-size:clamp(29px,4.5vw,52px);line-height:1.1;margin:18px auto 12px;max-width:1050px}.desc{font-weight:750;font-size:clamp(18px,2.3vw,24px);margin:4px auto 18px;max-width:970px}.art{height:100%;width:100%;filter:drop-shadow(0 6px 7px #17482919)}.hero{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin:20px}.hero svg{height:170px;width:170px}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;max-width:1030px;margin:20px auto}.cards.four{grid-template-columns:repeat(4,minmax(0,1fr))}.cards.two{grid-template-columns:repeat(2,minmax(0,1fr))}.tile{position:relative;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:7px;background:#fafffa;border:4px solid #d8edde;border-radius:25px;min-height:195px;padding:12px;box-shadow:0 7px 20px #225b3715;color:#244e3c}.tile svg{height:125px;width:145px;max-width:100%}.tile strong{font-size:clamp(18px,2vw,24px)}.tile small{font-weight:700;font-size:15px}.tile:disabled{cursor:default}.tile.good{border-color:#33b978;background:#dffbea}.tile.bad{border-color:#e86b82;background:#fff0f3}.tile.chosen{border-color:#f5ad31;background:#fff1cc}.primary{border:0;background:linear-gradient(#ffde7a,#ffb743);box-shadow:0 7px 0 #d58f2d;border-radius:50px;font-size:24px;font-weight:900;color:#613b08;padding:16px 30px;min-width:200px}.outline{background:white;border:2px solid #99cdb0;border-radius:35px;color:#196f4b;padding:13px 22px;font-weight:800}.feedback{min-height:48px;margin:16px 0;font-size:clamp(19px,2.3vw,25px);font-weight:900;color:#158451}.feedback.err{color:#c84e61}.actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}.binheads{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}.binhead{border:3px solid #b2dac2;border-radius:22px;min-width:240px;padding:12px;background:#f4fff6;font-size:21px;font-weight:900}.binhead.active{background:#fff0c3;border-color:#f3b73d}.instruction{font-size:22px;font-weight:850;color:#8a550d;background:#fff2cf;padding:12px;border-radius:20px;max-width:720px;margin:14px auto}.starrating{font-size:62px}.scorelarge{font-size:55px;font-weight:900;color:#178453}.subtitle{color:#597d69;font-size:14px;text-align:center;margin:14px}.speaker{border:0;border-radius:99px;background:#fff0c6;font-weight:900;color:#76520b;padding:9px 14px;font-size:17px}.statusstep{font-weight:900;background:#e5f8e8;border-radius:20px;padding:9px 15px;display:inline-block;margin:8px}.ordergrid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;max-width:1100px;margin:20px auto}.ordergrid .tile{min-height:175px}.ordergrid .tile svg{height:110px}.checkmark{position:absolute;right:8px;top:7px;font-size:25px}@media(max-width:750px){.stage{padding:18px 10px}.cards,.cards.four,.cards.two{grid-template-columns:repeat(2,minmax(0,1fr))}.tile{min-height:155px;padding:6px}.tile svg{height:95px}.ordergrid{grid-template-columns:repeat(2,1fr)}.ordergrid .tile{min-height:140px}.ordergrid .tile svg{height:90px}.binhead{min-width:130px}.hero svg{height:110px;width:110px}}
+</style></head><body><svg aria-hidden="true" width="0" height="0" style="position:absolute;overflow:hidden"><defs>
 <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8de76b"/><stop offset="1" stop-color="#199c60"/></linearGradient>
 <linearGradient id="petal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffb2cf"/><stop offset="1" stop-color="#f44784"/></linearGradient>
 <linearGradient id="pot" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#ffc36d"/><stop offset="1" stop-color="#f67c43"/></linearGradient>
@@ -83,199 +21,56 @@ button:focus-visible{outline:4px solid #ffbb46;outline-offset:3px}
 
 <symbol id="banana" viewBox="0 0 200 200"><path d="M42 118Q58 162 112 166Q147 168 170 146Q147 150 128 136Q102 118 95 84Q91 61 100 36Q75 43 59 63Q36 92 42 118Z" fill="#ffd84f" stroke="#e7b82d" stroke-width="5"/><path d="M99 36Q104 28 111 26" stroke="#7d5a31" stroke-width="6" stroke-linecap="round"/><path d="M164 145Q170 146 175 142" stroke="#7d5a31" stroke-width="6" stroke-linecap="round"/><path d="M60 118Q77 147 114 151Q136 154 153 145" fill="none" stroke="#fff2a6" stroke-width="6" stroke-linecap="round"/></symbol>
 <symbol id="grapes" viewBox="0 0 200 200"><path d="M102 30Q112 18 124 16" stroke="#6a8f2b" stroke-width="7" stroke-linecap="round" fill="none"/><path d="M101 33Q88 42 84 57" stroke="#6a8f2b" stroke-width="5" stroke-linecap="round" fill="none"/><g fill="#7f59d9" stroke="#6645b7" stroke-width="3"><circle cx="101" cy="55" r="17"/><circle cx="81" cy="74" r="17"/><circle cx="120" cy="75" r="17"/><circle cx="64" cy="95" r="17"/><circle cx="100" cy="96" r="17"/><circle cx="137" cy="95" r="17"/><circle cx="80" cy="118" r="17"/><circle cx="120" cy="118" r="17"/><circle cx="100" cy="142" r="17"/></g><path d="M88 37Q106 45 119 38Q109 55 90 57Q80 49 88 37Z" fill="#49b35d"/></symbol>
-</defs></svg>
-<div class="app">
-<header class="top">
-  <div class="brand">🌿 THẾ GIỚI THỰC VẬT - MỨC LỚP 1</div>
-  <div class="tools">
-    <div class="pill" id="scoreTop">⭐ 0 điểm</div>
-    <button class="iconbtn" id="replayVoice" title="Nghe lại" aria-label="Nghe lại">🗣️</button>
-    <button class="iconbtn" id="toggleVoice" title="Bật tắt giọng đọc" aria-label="Bật tắt giọng đọc">🔊</button>
-  </div>
-</header>
-<div class="progress" id="progress"></div>
-<main class="stage" id="stage" aria-live="polite"></main>
-<p class="note">Bản mới: sửa lỗi câu “Rễ”, tăng độ khó theo mức lớp 1, vẫn có giọng đọc chậm và rõ.</p>
-</div>
+
+<symbol id="mango" viewBox="0 0 200 200"><path d="M96 39Q132 34 155 55Q180 78 171 113Q161 154 122 167Q85 180 57 155Q28 129 34 92Q39 63 66 48Q77 42 96 39Z" fill="#ffca46" stroke="#e7a92c" stroke-width="5"/><path d="M88 45Q95 28 111 20" stroke="#7a5a32" stroke-width="7" stroke-linecap="round"/><path d="M99 41Q126 27 141 39Q129 57 100 59Q88 51 99 41Z" fill="#41b85f"/><path d="M63 117Q86 150 129 144" fill="none" stroke="#fff0a0" stroke-width="7" stroke-linecap="round"/></symbol>
+<symbol id="papaya" viewBox="0 0 200 200"><ellipse cx="101" cy="103" rx="58" ry="79" fill="#ffb05a" stroke="#e38336" stroke-width="5"/><ellipse cx="101" cy="103" rx="37" ry="57" fill="#ffdd78"/><g fill="#4b3724"><circle cx="88" cy="84" r="5"/><circle cx="101" cy="79" r="5"/><circle cx="113" cy="85" r="5"/><circle cx="93" cy="97" r="5"/><circle cx="108" cy="98" r="5"/><circle cx="82" cy="108" r="5"/><circle cx="100" cy="109" r="5"/><circle cx="118" cy="110" r="5"/><circle cx="91" cy="121" r="5"/><circle cx="110" cy="122" r="5"/></g><path d="M97 28Q103 18 111 15" stroke="#7a5a32" stroke-width="6" stroke-linecap="round"/><path d="M104 25Q126 14 139 24Q131 38 108 39Q99 34 104 25Z" fill="#42b963"/></symbol>
+<symbol id="watermelon" viewBox="0 0 200 200"><path d="M31 122Q50 55 117 44Q151 39 173 60Q156 142 83 161Q47 169 31 122Z" fill="#56c86b" stroke="#379d50" stroke-width="5"/><path d="M43 117Q54 74 99 62Q130 54 156 68Q141 131 89 144Q56 151 43 117Z" fill="#ff6f79"/><g fill="#2a251f"><ellipse cx="86" cy="84" rx="3" ry="6" transform="rotate(-18 86 84)"/><ellipse cx="109" cy="80" rx="3" ry="6" transform="rotate(12 109 80)"/><ellipse cx="128" cy="90" rx="3" ry="6" transform="rotate(-10 128 90)"/><ellipse cx="79" cy="107" rx="3" ry="6" transform="rotate(15 79 107)"/><ellipse cx="102" cy="105" rx="3" ry="6" transform="rotate(-8 102 105)"/><ellipse cx="124" cy="113" rx="3" ry="6" transform="rotate(18 124 113)"/></g><path d="M58 131Q92 116 137 122" fill="none" stroke="#ffd1d4" stroke-width="5" stroke-linecap="round"/></symbol>
+<symbol id="lychee" viewBox="0 0 200 200"><circle cx="100" cy="108" r="58" fill="#ef5a77" stroke="#d44662" stroke-width="5"/><g fill="#f48aa0"><circle cx="75" cy="84" r="6"/><circle cx="96" cy="74" r="6"/><circle cx="119" cy="80" r="6"/><circle cx="133" cy="101" r="6"/><circle cx="124" cy="127" r="6"/><circle cx="98" cy="137" r="6"/><circle cx="74" cy="125" r="6"/><circle cx="64" cy="102" r="6"/></g><path d="M98 50Q104 30 118 21" stroke="#7a5a32" stroke-width="7" stroke-linecap="round"/><path d="M105 45Q129 31 145 42Q134 57 110 59Q99 53 105 45Z" fill="#47ba63"/></symbol>
+<symbol id="leafpart" viewBox="0 0 200 200"><path d="M160 46Q104 44 68 80Q42 106 38 148Q82 145 110 120Q148 87 160 46Z" fill="#49b960" stroke="#2e934c" stroke-width="5"/><path d="M52 138Q91 105 133 72" fill="none" stroke="#e2ffe6" stroke-width="6" stroke-linecap="round"/><path d="M80 114Q76 101 67 92M100 95Q95 83 87 75M121 75Q116 66 109 60" fill="none" stroke="#e2ffe6" stroke-width="4" stroke-linecap="round"/></symbol>
+<symbol id="rootpart" viewBox="0 0 200 200"><path d="M100 25V84" stroke="#37955b" stroke-width="10" stroke-linecap="round"/><path d="M100 86Q82 108 70 132M100 86Q118 108 130 132M100 86V150M84 111Q74 125 61 154M116 112Q126 125 139 152" fill="none" stroke="#b78153" stroke-width="7" stroke-linecap="round"/></symbol>
+
+<symbol id="avocado" viewBox="0 0 200 200"><path d="M105 22C75 18 60 52 62 72C33 105 40 163 98 175C160 176 172 120 142 74C145 47 128 23 105 22Z" fill="#68b95b" stroke="#35894b" stroke-width="5"/><path d="M102 39C80 39 77 68 79 79C51 108 62 152 100 157C143 160 152 117 125 81C132 59 120 41 102 39Z" fill="#d8ec91"/><ellipse cx="104" cy="116" rx="27" ry="30" fill="#96633d" stroke="#744c2c" stroke-width="4"/></symbol>
+<symbol id="tomato" viewBox="0 0 200 200"><circle cx="100" cy="106" r="62" fill="#f4524c" stroke="#d93a41" stroke-width="5"/><path d="M100 60L88 34L106 51L125 36L116 63L147 59L120 76L100 61L80 77L51 59L84 63Z" fill="#3f9c59"/><path d="M97 56Q101 36 108 30" fill="none" stroke="#417c42" stroke-width="5"/><circle cx="76" cy="91" r="7" fill="#ff9690"/></symbol>
+<symbol id="lettuce" viewBox="0 0 200 200"><path d="M100 175Q58 165 48 132Q11 107 42 71Q31 35 79 36Q103 9 129 39Q168 27 164 71Q196 100 158 129Q150 169 100 175Z" fill="#7ed16c" stroke="#359a59" stroke-width="5"/><path d="M97 161Q51 120 84 63Q113 37 138 71Q167 123 97 161Z" fill="#a5e787" stroke="#55b967" stroke-width="5"/><path d="M98 153Q95 117 111 77M100 131L76 102" stroke="#4fba70" fill="none" stroke-width="5"/></symbol>
+<symbol id="radish" viewBox="0 0 200 200"><path d="M102 69Q57 64 64 113Q75 159 100 185Q127 152 139 109Q147 63 102 69Z" fill="#fcf2e5" stroke="#d5bd9c" stroke-width="5"/><path d="M104 70Q70 56 56 23Q89 24 105 56Q101 15 124 12Q131 44 111 67Q145 22 163 41Q146 69 109 79" fill="#56be6b"/></symbol>
+<symbol id="blossomfruit" viewBox="0 0 200 200"><path d="M100 178L100 100" stroke="#3b9661" stroke-width="9"/><path d="M100 143Q54 103 41 128Q52 151 100 143M100 130Q139 94 157 117Q145 147 100 130" fill="#55c375"/><circle cx="100" cy="73" r="31" fill="#f5d34e"/><g fill="#ed8aaa"><ellipse cx="100" cy="37" rx="16" ry="27"/><ellipse cx="132" cy="65" rx="16" ry="27" transform="rotate(72 132 65)"/><ellipse cx="119" cy="105" rx="16" ry="27" transform="rotate(145 119 105)"/><ellipse cx="80" cy="105" rx="16" ry="27" transform="rotate(215 80 105)"/><ellipse cx="68" cy="65" rx="16" ry="27" transform="rotate(290 68 65)"/></g><circle cx="100" cy="75" r="18" fill="#ffd65b"/></symbol>
+<symbol id="flood" viewBox="0 0 200 200"><path d="M63 110L73 173H132L143 110" fill="#e4a271" stroke="#ad724f" stroke-width="4"/><path d="M100 110V53M100 88L64 64M100 76L133 53" fill="none" stroke="#4aa566" stroke-width="8"/><path d="M63 65Q48 44 38 55Q45 80 63 65M132 53Q149 29 164 42Q157 68 132 53" fill="#6dbe70"/><path d="M24 135Q40 120 55 135T86 135T117 135T148 135T181 135M24 153Q40 138 55 153T86 153T117 153T148 153T181 153" fill="none" stroke="#52bff1" stroke-width="9" stroke-linecap="round"/></symbol>
+<symbol id="darkplant" viewBox="0 0 200 200"><rect x="32" y="27" width="136" height="155" rx="20" fill="#5f6e97"/><path d="M65 130L74 168H130L139 130Z" fill="#db9a6c"/><path d="M102 129V73M100 99L66 80M103 99L139 76" stroke="#b5b476" stroke-width="8" fill="none"/><path d="M64 81Q39 49 36 69Q44 91 64 81M140 77Q163 47 172 67Q164 91 140 77" fill="#d1c773"/></symbol>
+<symbol id="healthyplant" viewBox="0 0 200 200"><path d="M61 126L76 178H127L141 126Z" fill="#e8a374"/><path d="M100 128V40M101 89Q61 51 38 69Q52 99 101 89M100 70Q145 34 163 54Q147 86 100 70M100 115Q65 89 43 103Q62 126 100 115" fill="#56bc70" stroke="#409b5c" stroke-width="4"/><circle cx="160" cy="25" r="17" fill="#ffd859"/></symbol>
+</defs></svg><div class="wrap"><header class="top"><div class="logo">🌿 KHU VƯỜN TƯ DUY KỲ DIỆU</div><div class="tools"><div class="pill" id="score">⭐ 0</div><button class="round" id="repeat" title="Nghe lại câu hỏi">🔁</button><button class="round" id="sound" title="Bật tắt giọng đọc">🔊</button></div></header><div id="progress" class="progress"></div><main id="stage" class="stage"></main><p class="subtitle">Bé nghe, quan sát, phân loại và suy luận · Không cần biết đọc · 8 màn chơi</p></div>
 <script>
-const stage=document.getElementById('stage');
-const progress=document.getElementById('progress');
-const scoreTop=document.getElementById('scoreTop');
-const replayVoice=document.getElementById('replayVoice');
-const toggleVoice=document.getElementById('toggleVoice');
-let slide=0, score=0, voiceOn=true, voiceTimer=null, picked=[];
-const totalSlides=8, totalTasks=7, maxScore=70;
-const prompts=[
- ['Xin chào con.','Đây là trò chơi thế giới thực vật mức lớp một.','Con bấm bắt đầu để chơi nhé.'],
- ['Nhiệm vụ một.','Hãy chọn đúng hai loại quả.','Con nhớ chọn đủ hai hình nhé.'],
- ['Nhiệm vụ hai.','Cây bị héo vì thiếu nước.','Con hãy chọn việc nên làm.'],
- ['Nhiệm vụ ba.','Bộ phận nào ở dưới đất và hút nước cho cây?','Con chọn thật chính xác nhé.'],
- ['Nhiệm vụ bốn.','Hãy xếp quá trình lớn lên của cây theo đúng thứ tự.'],
- ['Nhiệm vụ năm.','Nếu đặt cây trong hộp tối nhiều ngày, cây sẽ thiếu gì?'],
- ['Nhiệm vụ sáu.','Hãy chọn hai việc làm giúp cây phát triển tốt.'],
- ['Con đã hoàn thành trò chơi.','Cây cần nước, ánh sáng, đất tốt và sự chăm sóc của chúng mình.']
+const stage=document.getElementById('stage'), scoreEl=document.getElementById('score'), progress=document.getElementById('progress');
+const puzzles=[
+ {title:'THÁM HIỂM HẠT QUẢ', desc:'Hãy phân tất cả sáu loại quả theo số hạt bên trong.',prompt:['Nhiệm vụ một.','Con hãy phân loại sáu quả.','Quả có một hạt và quả có nhiều hạt.','Con chạm vào từng quả để xếp vào giỏ nhé.'],kind:'sort',data:[['Xoài','mango',0],['Đu đủ','papaya',1],['Vải','lychee',0],['Dưa hấu','watermelon',1],['Bơ','avocado',0],['Cà chua','tomato',1]],bins:['MỘT HẠT','NHIỀU HẠT'],explain:'Xoài, vải và bơ thường có một hạt. Đu đủ, dưa hấu và cà chua có nhiều hạt.'},
+ {title:'AI Ở CÙNG NHÓM?',desc:'Tìm ba loại quả có nhiều hạt trong sáu hình.',prompt:['Nhiệm vụ hai.','Trong sáu loại quả, con chọn đúng ba quả có nhiều hạt.','Hãy nhớ những điều vừa khám phá ở nhiệm vụ trước.'],kind:'multi',data:[['Vải','lychee',0],['Cà chua','tomato',1],['Bơ','avocado',0],['Đu đủ','papaya',1],['Xoài','mango',0],['Dưa hấu','watermelon',1]],correct:[1,3,5],explain:'Cà chua, đu đủ và dưa hấu có nhiều hạt ở bên trong.'},
+ {title:'BỘ PHẬN NÀO CHÚNG TA ĂN?',desc:'Xếp sáu thực phẩm vào nhóm rễ, lá hoặc quả.',prompt:['Nhiệm vụ ba.','Con hãy xếp từng hình vào ba nhóm.','Ăn rễ. Ăn lá. Hoặc ăn quả.','Con quan sát thật kỹ rồi chọn nhóm nhé.'],kind:'sort',data:[['Cà rốt','carrot',0],['Xà lách','lettuce',1],['Cà chua','tomato',2],['Củ cải','radish',0],['Lá rau','leafpart',1],['Đu đủ','papaya',2]],bins:['RỄ','LÁ','QUẢ'],explain:'Cà rốt và củ cải là rễ. Rau xà lách và lá rau thuộc nhóm lá. Cà chua và đu đủ là quả.'},
+ {title:'THỬ THÁCH HẠT BÍ MẬT',desc:'Phát hiện một cặp gồm quả một hạt và quả nhiều hạt.',prompt:['Nhiệm vụ bốn.','Con chọn một quả chỉ có một hạt.','Sau đó chọn một quả có nhiều hạt.','Hai quả phải thuộc hai nhóm khác nhau.'],kind:'pair',data:[['Đu đủ','papaya',1],['Vải','lychee',0],['Dưa hấu','watermelon',1],['Bơ','avocado',0],['Cà chua','tomato',1],['Xoài','mango',0]],explain:'Giỏi lắm! Con đã chọn một quả một hạt và một quả nhiều hạt.'},
+ {title:'HÀNH TRÌNH CỦA HẠT',desc:'Sắp xếp đủ năm giai đoạn sinh trưởng theo thứ tự.',prompt:['Nhiệm vụ năm.','Con hãy xếp năm hình theo đúng quá trình lớn lên.','Bắt đầu từ hạt giống.','Sau đó cây nảy mầm, thành cây non, ra hoa, rồi kết quả.'],kind:'order',data:[['Cây non','plant'],['Ra hoa','flower'],['Hạt giống','seed'],['Kết quả','mango'],['Nảy mầm','sprout']],order:[2,4,0,1,3],explain:'Từ hạt, cây nảy mầm, lớn lên, ra hoa và kết quả.'},
+ {title:'BÁC SĨ CỦA CÂY',desc:'Tìm hai tình huống chăm cây chưa đúng.',prompt:['Nhiệm vụ sáu.','Bốn tình huống chăm cây.','Có hai tình huống chưa đúng.','Con tìm đủ hai tình huống cần sửa nhé.'],kind:'multi',data:[['Tưới quá nhiều','flood',1],['Đủ ánh sáng','healthyplant',0],['Đặt lâu trong tối','darkplant',1],['Cây được chăm tốt','plant',0]],correct:[0,2],explain:'Tưới quá nhiều làm rễ dễ bị úng. Để cây lâu trong bóng tối khiến cây thiếu ánh sáng.'}
 ];
-const taskState={orderIndex:0, expectedOrder:[1,2,0,3]};
-function stopSpeak(){if(voiceTimer)clearTimeout(voiceTimer);try{speechSynthesis.cancel()}catch(e){}}
-function getVietnameseVoice(){
-  try{
-    const voices=speechSynthesis.getVoices();
-    const matches=voices.filter(v=>/^vi([_-]|$)/i.test(v.lang));
-    return matches.find(v=>/google|microsoft|natural|việt|vietnam/i.test(v.name)) || matches[0] || null;
-  }catch(e){return null}
-}
-function speak(parts){
-  if(!voiceOn || !('speechSynthesis' in window)) return;
-  stopSpeak();
-  const texts=(Array.isArray(parts)?parts:[parts]).map(t=>String(t).replace(/[🌿🌱🍌🍇💧☀️⭐🏆]/gu,'').trim()).filter(Boolean);
-  const voice=getVietnameseVoice();
-  let index=0;
-  const nextPart=()=>{
-    if(!voiceOn || index>=texts.length) return;
-    const u=new SpeechSynthesisUtterance(texts[index++]);
-    u.lang='vi-VN'; u.rate=0.84; u.pitch=1; u.volume=1;
-    if(voice) u.voice=voice;
-    u.onend=()=>voiceTimer=setTimeout(nextPart,520);
-    u.onerror=()=>voiceTimer=setTimeout(nextPart,520);
-    speechSynthesis.speak(u);
-  };
-  nextPart();
-}
-function speakSlide(){ speak(prompts[slide]); }
-const art=(name,title='')=>`<svg class="art" role="img" aria-label="${title||name}" viewBox="0 0 200 200"><use href="#${name}"/></svg>`;
-const heroArt=name=>`<div class="bigart">${art(name)}</div>`;
-const button=(label,fn='next()')=>`<button class="primary" onclick="${fn}">${label}</button>`;
-function base(kicker,title,desc,inside,footer=''){
-  return `<span class="kicker">${kicker}</span><h1 class="heading">${title}</h1><p class="sub">${desc}</p>${inside}<div class="feedback" id="feedback"></div><div class="bottom" id="bottom">${footer}</div>`;
-}
-function card(item,i,handler='chooseSingle'){
-  return `<button class="choice" data-i="${i}" onclick="${handler}(${i})"><div class="artbox">${art(item.pic,item.name)}</div><span class="label">${item.name}</span></button>`;
-}
-function updateScore(){ scoreTop.textContent=`⭐ ${score} điểm`; }
-function feedback(ok,visible,spoken=''){
-  const el=document.getElementById('feedback');
-  el.textContent=visible;
-  el.className='feedback'+(ok?'':' err');
-  speak(spoken || visible);
-}
-function complete(explanation){
-  score += 10;
-  updateScore();
-  feedback(true,'🎉 Chính xác! ' + explanation,['Chính xác.','Giỏi lắm con.', explanation]);
-  document.getElementById('bottom').innerHTML = button(slide===6 ? '🏆 XEM KẾT QUẢ' : '🌼 TIẾP TỤC');
-  [...stage.querySelectorAll('.choice')].forEach(b=>b.disabled=true);
-}
-function render(){
-  picked=[];
-  taskState.orderIndex=0;
-  progress.innerHTML=Array.from({length:totalSlides},(_,i)=>`<div class="dot ${i<slide?'done':''} ${i===slide?'now':''}"></div>`).join('');
-  updateScore();
-  let html='';
-  if(slide===0) html=base('🌼 SẴN SÀNG CHƯA?','KHÁM PHÁ THẾ GIỚI THỰC VẬT','Bản này có độ khó cao hơn, dành cho mức lớp 1.',`<div class="hero">${heroArt('tree')}${heroArt('wholeplant')}${heroArt('banana')}</div><p class="smallhint">Con hãy nghe kỹ câu hỏi rồi chọn đáp án nhé.</p>`,button('🌟 BẮT ĐẦU'));
-  if(slide===1) html=base('🍌 NHIỆM VỤ 1','HÃY CHỌN ĐÚNG HAI LOẠI QUẢ','Trong 4 hình dưới đây, có đúng 2 loại quả.',`<div class="choices">${[
-    {pic:'banana',name:'Quả chuối'},
-    {pic:'carrot',name:'Cà rốt'},
-    {pic:'grapes',name:'Quả nho'},
-    {pic:'flower',name:'Bông hoa'}
-  ].map((x,i)=>card(x,i,'chooseFruits')).join('')}</div>`);
-  if(slide===2) html=base('💧 NHIỆM VỤ 2','CÂY BỊ HÉO RỒI!','Cây đang thiếu nước. Con nên làm gì?',`<div class="choices three">${[
-    {pic:'water',name:'Tưới nước'},
-    {pic:'toy',name:'Cho đồ chơi'},
-    {pic:'banana',name:'Cho ăn chuối'}
-  ].map((x,i)=>card(x,i,'chooseSingle')).join('')}</div>`);
-  if(slide===3) html=base('🌱 NHIỆM VỤ 3','BỘ PHẬN NÀO Ở DƯỚI ĐẤT?','Bộ phận này hút nước từ đất để nuôi cây.',`<div class="hero">${heroArt('wholeplant')}</div><div class="choices three">${[
-    {pic:'flower',name:'Hoa'},
-    {pic:'leaf',name:'Lá'},
-    {pic:'sprout',name:'Rễ'}
-  ].map((x,i)=>card(x,i,'chooseSingle')).join('')}</div>`, '');
-  if(slide===4) html=base('🌿 NHIỆM VỤ 4','XẾP ĐÚNG QUÁ TRÌNH LỚN LÊN CỦA CÂY','Con hãy chạm theo thứ tự đúng: từ hạt đến cây trưởng thành.',`<div class="order">${[
-    {pic:'plant',name:'Cây non'},
-    {pic:'seed',name:'Hạt giống'},
-    {pic:'sprout',name:'Mầm cây'},
-    {pic:'tree',name:'Cây trưởng thành'}
-  ].map((x,i)=>`<button class="choice" data-i="${i}" onclick="chooseOrder(${i})"><div class="artbox">${art(x.pic,x.name)}</div><span class="step">${i+1}</span><span class="label">${x.name}</span></button>`).join('')}</div><p class="sub" id="orderHelp">Gợi ý: Hạt → Mầm → Cây non → Cây trưởng thành</p>`);
-  if(slide===5) html=base('☀️ NHIỆM VỤ 5','CÂY Ở TRONG HỘP TỐI','Nếu bị để trong chỗ tối nhiều ngày, cây sẽ thiếu gì?',`<div class="choices three">${[
-    {pic:'water',name:'Nước'},
-    {pic:'sun',name:'Ánh sáng'},
-    {pic:'toy',name:'Đồ chơi'}
-  ].map((x,i)=>card(x,i,'chooseSingle')).join('')}</div>`);
-  if(slide===6) html=base('🌼 NHIỆM VỤ 6','CHỌN HAI VIỆC LÀM TỐT CHO CÂY','Có 2 việc làm giúp cây phát triển tốt.',`<div class="choices">${[
-    {pic:'water',name:'Tưới nước vừa đủ'},
-    {pic:'sun',name:'Đặt nơi có nắng'},
-    {pic:'toy',name:'Giẫm lên chậu'},
-    {pic:'carrot',name:'Bứt lá liên tục'}
-  ].map((x,i)=>card(x,i,'chooseCare')).join('')}</div>`);
-  if(slide===7){
-    const stars = score>=60 ? '🌟🌟🌟' : score>=40 ? '🌟🌟' : '🌟';
-    const textScore = score>=60 ? 'Xuất sắc! Con đã nắm kiến thức rất tốt.' : score>=40 ? 'Giỏi lắm! Con hiểu khá nhiều về cây rồi.' : 'Con đã cố gắng tốt. Chúng mình cùng chơi lại nhé!';
-    html=base('🏆 HOÀN THÀNH','CON LÀ CHUYÊN GIA NHÍ VỀ THỰC VẬT!','Chúc mừng con đã vượt qua bản nâng cấp.',`<div class="stars">${stars}</div><div class="scorebig">${score} / ${maxScore}</div><p class="sub">${textScore}</p><div class="hero">${heroArt('tree')}${heroArt('yellowflower')}${heroArt('plant')}</div><p class="sub">Điều cần nhớ: rễ hút nước, lá giúp cây xanh, cây cần nước và ánh sáng.</p>`,button('🔄 CHƠI LẠI','restart()'));
-  }
-  stage.innerHTML=html;
-  if(slide>0) setTimeout(speakSlide, 350);
-}
-function chooseFruits(i){
-  const correct=[0,2];
-  const buttons=[...stage.querySelectorAll('.choice')];
-  if(buttons[i].disabled) return;
-  if(!correct.includes(i)){
-    buttons[i].classList.add('wrong');
-    feedback(false,'Chưa đúng. Con hãy tìm quả nhé.','Hình này không phải quả. Con tìm lại nhé.');
-    setTimeout(()=>buttons[i]&&buttons[i].classList.remove('wrong'),700);
-    return;
-  }
-  buttons[i].classList.add('correct'); buttons[i].disabled=true; picked.push(i);
-  if(picked.length===2) complete('Chuối và nho đều là quả.');
-  else feedback(true,'Đúng rồi! Con tìm thêm một quả nữa nhé.','Giỏi lắm. Con tìm thêm một quả nữa nhé.');
-}
-function chooseSingle(i){
-  const answerMap={2:0,3:2,5:1};
-  const explanations={2:'Tưới nước giúp cây bớt héo và tươi lại.',3:'Rễ ở dưới đất và hút nước cho cây.',5:'Cây cần ánh sáng để lớn lên và xanh tốt.'};
-  const buttons=[...stage.querySelectorAll('.choice')];
-  const correct=answerMap[slide];
-  if(i===correct){
-    buttons[i].classList.add('correct');
-    complete(explanations[slide]);
-  } else {
-    buttons[i].classList.add('wrong');
-    feedback(false,'Chưa đúng. Con quan sát và nghĩ lại nhé.','Chưa đúng. Con thử lại nhé.');
-    setTimeout(()=>buttons[i]&&buttons[i].classList.remove('wrong'),700);
-  }
-}
-function chooseOrder(i){
-  const expected=[1,2,0,3];
-  const buttons=[...stage.querySelectorAll('.choice')];
-  if(buttons[i].disabled) return;
-  if(i!==expected[taskState.orderIndex]){
-    buttons[i].classList.add('wrong');
-    feedback(false,'Sai thứ tự rồi. Con thử lại nhé.','Con hãy bắt đầu từ hạt giống nhé.');
-    setTimeout(()=>buttons[i]&&buttons[i].classList.remove('wrong'),700);
-    return;
-  }
-  buttons[i].classList.add('correct'); buttons[i].disabled=true; taskState.orderIndex++;
-  const hints=['Đúng rồi! Tiếp theo là mầm cây.','Giỏi lắm! Tiếp theo là cây non.','Rất tốt! Cuối cùng là cây trưởng thành.'];
-  if(taskState.orderIndex===4) complete('Hạt nảy mầm, lớn thành cây non, rồi thành cây trưởng thành.');
-  else feedback(true,hints[taskState.orderIndex-1],hints[taskState.orderIndex-1]);
-}
-function chooseCare(i){
-  const correct=[0,1];
-  const buttons=[...stage.querySelectorAll('.choice')];
-  if(buttons[i].disabled) return;
-  if(!correct.includes(i)){
-    buttons[i].classList.add('wrong');
-    feedback(false,'Việc này không tốt cho cây. Con chọn lại nhé.','Việc này không giúp cây phát triển. Con thử lại nhé.');
-    setTimeout(()=>buttons[i]&&buttons[i].classList.remove('wrong'),700);
-    return;
-  }
-  buttons[i].classList.add('correct'); buttons[i].disabled=true; picked.push(i);
-  if(picked.length===2) complete('Tưới nước vừa đủ và có ánh sáng sẽ giúp cây phát triển tốt.');
-  else feedback(true,'Đúng rồi! Còn một việc tốt nữa đấy.','Đúng rồi. Con tìm thêm một việc tốt nữa nhé.');
-}
-function next(){ stopSpeak(); if(slide<totalSlides-1){ slide++; render(); } }
-function restart(){ stopSpeak(); slide=0; score=0; updateScore(); render(); }
-replayVoice.onclick=()=>speakSlide();
-toggleVoice.onclick=()=>{ voiceOn=!voiceOn; toggleVoice.textContent=voiceOn?'🔊':'🔇'; if(!voiceOn) stopSpeak(); else speakSlide(); };
-if('speechSynthesis' in window) window.speechSynthesis.onvoiceschanged=()=>{};
-render();
-</script>
-</body>
-</html>
+let slide=0,points=0,selected=new Set(),step=0,readEnabled=true,audioSerial=0,hasWon=false,wrongTimer=0;const voiceDefault=['Con đã sẵn sàng chưa?','Chúng mình cùng khám phá khu vườn tư duy kỳ diệu nhé.','Hãy nghe và quan sát thật kỹ.'];
+function art(id,label){return `<svg class="art" role="img" aria-label="${label||id}" viewBox="0 0 200 200"><use href="#${id}"></use></svg>`}
+function stopVoice(){audioSerial++;try{speechSynthesis.cancel()}catch(e){}}
+function voice(strings){if(!readEnabled||!('speechSynthesis' in window))return;stopVoice();const token=audioSerial;let parts=(Array.isArray(strings)?strings:[strings]).filter(Boolean);let pos=0;function next(){if(token!==audioSerial||pos===parts.length||!readEnabled)return;let s=new SpeechSynthesisUtterance(parts[pos++]);s.lang='vi-VN';s.rate=.82;s.pitch=1;s.volume=1;let voices=speechSynthesis.getVoices();let vi=voices.find(v=>/^vi[-_]/i.test(v.lang))||voices.find(v=>v.lang==='vi');if(vi)s.voice=vi;s.onend=()=>{if(token===audioSerial)setTimeout(next,260)};s.onerror=()=>{if(token===audioSerial)setTimeout(next,260)};speechSynthesis.speak(s)}next()}
+function prompt(){if(slide===0)return voice(voiceDefault);if(slide===7)return voice(['Chúc mừng con đã vượt qua các nhiệm vụ khó.','Con đã biết phân loại quả và chăm sóc cây đúng cách.']);return voice(puzzles[slide-1].prompt)}
+function sayItem(i){const q=puzzles[slide-1];voice(q.data[i][0])}
+function addFeedback(ok,msg,spoken){let t=document.getElementById('feedback');t.textContent=msg;t.className='feedback'+(ok?'':' err');voice(spoken||msg)}
+function finish(){if(hasWon)return;hasWon=true;points+=10;scoreEl.textContent='⭐ '+points;let q=puzzles[slide-1];addFeedback(true,'🎉 Xuất sắc! '+q.explain,['Con làm đúng rồi.','Giỏi lắm.',q.explain]);document.getElementById('actions').innerHTML=`<button class="primary" onclick="nextSlide()">${slide===6?'🏆 NHẬN THƯỞNG':'🌟 QUA MÀN TIẾP'}</button>`;stage.querySelectorAll('.tile').forEach(b=>b.disabled=true)}
+function tile(item,i){return `<button class="tile" data-id="${i}" onclick="pick(${i})">${art(item[1],item[0])}<strong>${item[0]}</strong><span class="checkmark"></span></button>`}
+function base(tag,title,desc,body,actions=''){return `<span class="tag">${tag}</span><h1 class="title">${title}</h1><p class="desc">${desc}</p>${body}<div class="feedback" id="feedback" role="status"></div><div class="actions" id="actions">${actions}</div>`}
+function render(){hasWon=false;selected=new Set();step=0;scoreEl.textContent='⭐ '+points;progress.innerHTML=Array.from({length:8},(_,i)=>`<div class="dot ${i<slide?'done':''} ${i===slide?'active':''}"></div>`).join('');if(slide===0){stage.innerHTML=base('🌼 BẮT ĐẦU','KHU VƯỜN TƯ DUY KỲ DIỆU','Con sẽ trở thành nhà khám phá hạt, quả và cây xanh.',`<div class="hero">${art('mango')}${art('papaya')}${art('wholeplant')}</div><p class="instruction">6 thử thách tư duy · Phân loại · Suy luận · Tìm quy luật</p>`,`<button class="primary" onclick="nextSlide()">🌟 BẮT ĐẦU</button>`);return}
+if(slide===7){stage.innerHTML=base('🏆 HOÀN THÀNH','NHÀ KHÁM PHÁ TÀI BA','Con đã giải xong sáu nhiệm vụ của khu vườn!',`<div class="starrating">${points>=50?'🌟🌟🌟':points>=30?'🌟🌟':'🌟'}</div><div class="scorelarge">${points} / 60</div><div class="hero">${art('lychee')}${art('watermelon')}${art('healthyplant')}</div><p class="desc">Một hạt – nhiều hạt · Rễ – lá – quả · Cây lớn lên · Chăm cây đúng cách</p>`,`<button class="primary" onclick="restart()">🔄 CHƠI LẠI</button>`);setTimeout(prompt,300);return}
+let q=puzzles[slide-1], extras='';if(q.kind==='sort'){extras=`<div class="binheads">${q.bins.map((b,j)=>`<div class="binhead ${j===0?'active':''}" id="bin${j}">${b}: <span id="count${j}">0</span></div>`).join('')}</div><p class="instruction" id="phase">${['Giỏ thứ nhất: '+q.bins[0], ''][0]}</p>`}
+if(q.kind==='pair')extras='<p class="instruction" id="phase">Bước 1: Tìm quả MỘT HẠT</p>';
+if(q.kind==='order')extras='<p class="instruction" id="phase">Bước 1: Chọn HẠT GIỐNG</p>';
+if(q.kind==='multi')extras=`<p class="instruction">Chọn đủ ${q.correct.length} hình phù hợp</p>`;
+let cls=q.data.length>=5?'':'two';if(q.kind==='order')cls='four';
+stage.innerHTML=base(`🧠 NHIỆM VỤ ${slide} / 6`,q.title,q.desc,extras+`<div class="cards ${cls}">${q.data.map(tile).join('')}</div>`);
+setTimeout(prompt,270)}
+function wrong(i,spoken){const b=stage.querySelector(`[data-id="${i}"]`);b.classList.add('bad');addFeedback(false,'Chưa đúng. Quan sát và thử lại nhé!',spoken||'Con quan sát lại nhé.');setTimeout(()=>{if(stage.contains(b))b.classList.remove('bad')},620)}
+function pick(i){if(hasWon)return;let q=puzzles[slide-1],b=stage.querySelector(`[data-id="${i}"]`);if(!b||b.disabled)return;const item=q.data[i];if(q.kind==='sort'){if(item[2]!==step)return wrong(i,'Quả này không thuộc nhóm đang chọn. Con thử lại nhé.');selected.add(i);b.disabled=true;b.classList.add('good');let count=Array.from(selected).filter(j=>q.data[j][2]===step).length;document.getElementById('count'+step).textContent=count;let n=q.data.filter(x=>x[2]===step).length;if(count===n){if(step===q.bins.length-1)return finish();step++;for(let j=0;j<q.bins.length;j++)document.getElementById('bin'+j).classList.toggle('active',j===step);document.getElementById('phase').textContent='Giỏ tiếp theo: '+q.bins[step];voice(['Đúng rồi.','Bây giờ con tìm nhóm '+q.bins[step]])}else voice('Chính xác. Con tìm thêm nhé.');return}
+if(q.kind==='multi'){if(!q.correct.includes(i))return wrong(i,'Hình này không thuộc nhóm con cần tìm.');selected.add(i);b.disabled=true;b.classList.add('good');if(selected.size===q.correct.length)return finish();voice('Đúng rồi. Con hãy tìm tiếp.');return}
+if(q.kind==='pair'){if(item[2]!==step)return wrong(i,step===0?'Con chọn quả một hạt trước nhé.':'Bây giờ con chọn quả nhiều hạt nhé.');selected.add(i);b.disabled=true;b.classList.add('good');if(step===1)return finish();step++;document.getElementById('phase').textContent='Bước 2: Tìm quả NHIỀU HẠT';voice('Đúng rồi. Bây giờ con hãy chọn một quả có nhiều hạt.');return}
+if(q.kind==='order'){if(i!==q.order[step])return wrong(i,'Đây chưa phải giai đoạn tiếp theo. Con nghĩ lại nhé.');b.disabled=true;b.classList.add('good');step++;if(step===q.order.length)return finish();let next=q.data[q.order[step]][0];document.getElementById('phase').textContent='Bước '+(step+1)+': '+next.toUpperCase();voice('Đúng rồi. Tiếp theo là '+next);return}}
+function nextSlide(){stopVoice();if(slide<7){slide++;render()}}function restart(){stopVoice();slide=0;points=0;render()};document.getElementById('repeat').onclick=prompt;document.getElementById('sound').onclick=()=>{readEnabled=!readEnabled;document.getElementById('sound').textContent=readEnabled?'🔊':'🔇';if(!readEnabled)stopVoice();else prompt()};render();
+</script></body></html>

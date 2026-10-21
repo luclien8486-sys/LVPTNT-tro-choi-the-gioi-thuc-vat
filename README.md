@@ -1,17 +1,15 @@
-# Trò chơi thế giới thực vật - mức lớp 1
+# Khu vườn tư duy kỳ diệu
 
-## Điểm mới
-- Sửa lỗi nhiệm vụ chọn rễ báo sai.
-- Tăng độ khó theo mức lớp 1.
-- Có 8 slide: mở đầu, 6 nhiệm vụ, tổng kết.
-- Giọng đọc tiếng Việt chậm, rõ hơn.
+8 màn: mở đầu, 6 nhiệm vụ tư duy nâng cao, tổng kết.
 
-## Các nhiệm vụ
-1. Chọn đúng hai loại quả.
-2. Xử lý tình huống cây bị héo.
-3. Chọn bộ phận ở dưới đất và hút nước.
-4. Xếp đúng quá trình lớn lên của cây.
-5. Suy luận cây thiếu gì khi ở trong hộp tối.
-6. Chọn hai việc làm tốt cho cây.
+- Phân loại 6 quả thành hai nhóm một hạt và nhiều hạt.
+- Tìm 3 quả nhiều hạt từ 6 hình.
+- Phân loại 6 thực phẩm theo bộ phận rễ, lá, quả.
+- Ghép cặp một hạt và nhiều hạt.
+- Sắp xếp 5 bước cây trưởng thành.
+- Phát hiện 2 cách chăm cây chưa đúng.
 
-Mở file `index.html` để chạy hoặc tải thư mục này lên GitHub Pages.
+Có giọng đọc tiếng Việt tốc độ chậm, nút phát lại, lời giải thích sau mỗi nhiệm vụ. Tốc độ và giọng đọc phụ thuộc tiếng Việt hỗ trợ trên máy.
+
+## GitHub Pages
+Giải nén và tải `index.html`, `README.md` lên thư mục gốc của kho GitHub.
